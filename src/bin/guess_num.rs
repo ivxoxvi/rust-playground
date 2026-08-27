@@ -4,8 +4,8 @@ use rand::Rng;
 
 fn main() {
     println!("Guess the number!");
+    const ADMIN_PASSWORD: u32 = 999;
     let secret_number = rand::thread_rng().gen_range(1..=100);
-    println!("The secret number is: {secret_number}");
 
     loop {
         println!("Please input your guess.");
@@ -20,6 +20,11 @@ fn main() {
             Err(_) => continue,
         };
         println!("you guessed: {guess}");
+
+        if guess == ADMIN_PASSWORD {
+            println!("I salute you, my lord");
+            return;
+        }
 
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("too small"),
