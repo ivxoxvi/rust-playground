@@ -1,0 +1,15 @@
+[package]
+name = "misc"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+utils = { path = "../utils" }
+rand = {workspace = true}
+
+[[bench]]
+name = "predict"
+harness = false
+
+[dev-dependencies]
+criterion = { version="0.8.2", features = ["html_reports"]}

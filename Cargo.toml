@@ -1,8 +1,21 @@
-[package]
-name = "rust-playground"
-version = "0.1.0"
-edition = "2024"
+[workspace]
+resolver = "3"
+members = [
+    "demos",
+    "algo",
+    "misc",
+    "third",
+    "utils",
+]
 
-[dependencies]
-clap = { version = "4.6.7", features = ["derive"] }
+[workspace.package]
+authors = ["vxoxv"]
+description = "my rust playground"
+
+[workspace.dependencies]
 rand = "0.10.2"
+clap = { version = "4.6.7" }
+env_logger = { version = "0.11.11"}
+eframe = { version = "0.36.2"}
+egui_extras = { version = "0.36.2"}
+rfd = "0.17.2"
