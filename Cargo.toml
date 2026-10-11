@@ -14,8 +14,9 @@ description = "my rust playground"
 
 [workspace.dependencies]
 rand = "0.10.2"
-clap = { version = "4.6.7" }
-env_logger = { version = "0.11.11"}
-eframe = { version = "0.36.2"}
-egui_extras = { version = "0.36.2"}
+clap =  "4.6.7"
+env_logger ="0.11.11"
+eframe =  "0.36.2"
+egui_extras = "0.36.2"
 rfd = "0.17.2"
+tokio = "1.53.2"

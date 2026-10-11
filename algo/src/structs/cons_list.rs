@@ -26,7 +26,7 @@ impl<T: Debug> ConsList<T> {
     fn head(&self) -> Option<Rc<RefCell<T>>> {
         match self {
             Self::Nil => None,
-            Self::Cons(value, _) => Some(Rc::clone(&value)),
+            Self::Cons(value, _) => Some(Rc::clone(value)),
         }
     }
 
@@ -35,7 +35,7 @@ impl<T: Debug> ConsList<T> {
             Self::Nil => None,
             Self::Cons(value, next) => {
                 if idx == 0 {
-                    Some(Rc::clone(&value))
+                    Some(Rc::clone(value))
                 } else {
                     next.get(idx - 1)
                 }

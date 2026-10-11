@@ -13,11 +13,11 @@ struct Node<T> {
 #[allow(dead_code)]
 impl<T> Node<T> {
     fn new(value: T) -> Self {
-        return Node {
+        Node {
             value,
             parent: Rc::new(RefCell::new(None)),
             children: vec![],
-        };
+        }
     }
 }
 
